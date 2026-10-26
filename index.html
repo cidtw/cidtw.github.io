@@ -3,8 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Taewon Kwon 포트폴리오</title>
-<meta name="description" content="Taewon Kwon — AI Application Engineer / Producer. Projects, profile, career.">
+<title>권태원 포트폴리오 | 영업관리 · AI 애플리케이션</title>
+<meta name="description" content="데이터로 매장을 관리하는 영업관리자 권태원의 포트폴리오. 발주맞춤(OrderFit), 자동화 프로젝트, 경력과 자격.">
+<link rel="canonical" href="https://twdev.kr/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="twdev.kr">
+<meta property="og:title" content="권태원 포트폴리오 | 영업관리 · AI 애플리케이션">
+<meta property="og:description" content="데이터로 매장을 관리하는 영업관리자 권태원의 포트폴리오. 발주맞춤(OrderFit), 자동화 프로젝트, 경력과 자격.">
+<meta property="og:url" content="https://twdev.kr/">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="권태원 포트폴리오 | 영업관리 · AI 애플리케이션">
+<meta name="twitter:description" content="데이터로 매장을 관리하는 영업관리자 권태원의 포트폴리오.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
@@ -28,8 +39,9 @@
   nav a:hover, .foot a:hover { color: var(--accent); }
 
   #top { max-width: 1120px; margin: 0 auto; padding: 96px 24px 120px; }
-  #top h1 { margin: 0; font-family: var(--mono); font-weight: 400; font-size: 16px; line-height: 1.15;
-    letter-spacing: -0.03em; color: #B4FF00; text-shadow: 0 0 36px var(--accent); }
+  #top h1 { margin: 0; font-weight: 900; font-size: 44px; line-height: 1.25; letter-spacing: -0.03em;
+    color: #B4FF00; text-shadow: 0 0 36px var(--accent); }
+  #top .sub { margin: 20px 0 0; font-family: var(--mono); font-size: 17px; color: var(--muted); }
   .ctas { margin-top: 56px; display: flex; flex-wrap: wrap; gap: 12px; }
   .btn { padding: 16px 28px; border-radius: 4px; background: var(--accent); color: var(--bg);
     font-family: var(--mono); font-weight: 700; font-size: 15px; }
@@ -42,6 +54,7 @@
     border-bottom: 2px solid var(--accent); }
   .head h2 { margin: 0; font-size: 32px; font-weight: 900; letter-spacing: -0.03em; }
   .head span { font-family: var(--mono); font-size: 14px; color: var(--muted); }
+  .sub-head { margin: 48px 0 0; font-family: var(--mono); font-size: 14px; color: var(--muted); }
 
   .row { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; padding: 28px 12px;
     border-bottom: 1px solid var(--line); }
@@ -49,6 +62,8 @@
   .row .nm { flex: 1 1 260px; min-width: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.02em; }
   .row .tag { flex: 0 1 220px; font-family: var(--mono); font-size: 14px; color: var(--muted); }
   .row .ar { font-family: var(--mono); font-size: 22px; color: #6B727A; transition: transform .15s; }
+  .row .desc { display: block; flex: 1 1 100%; margin: 0; padding-left: 64px; font-size: 16px; line-height: 1.6; color: var(--soft); }
+  .row .shot { flex: 1 1 100%; width: calc(100% - 64px); margin-left: 64px; border: 1px solid var(--line); border-radius: 6px; }
   .row:hover { background: var(--hover); }
   .row:hover .nm, .row:hover .ar { color: var(--accent); }
   .row:hover .ar { transform: translateX(6px); }
@@ -65,6 +80,8 @@
   .chips { display: flex; flex-wrap: wrap; gap: 8px; }
   .chips span { padding: 4px 12px; border: 1px solid var(--edge); border-radius: 4px; font-family: var(--mono);
     font-size: 13px; color: var(--soft); }
+  .certs { display: flex; flex-direction: column; gap: 6px; font-size: 16px; line-height: 1.6; }
+  .certs small { font-size: 13px; color: var(--dim); }
 
   .job { display: flex; flex-wrap: wrap; gap: 12px 40px; padding: 32px 0; border-bottom: 1px solid var(--line); }
   .job .when { flex: 0 0 220px; font-family: var(--mono); font-size: 14px; line-height: 1.7; color: var(--accent); }
@@ -73,6 +90,7 @@
   .job .team { display: block; margin-top: 2px; font-size: 15px; font-weight: 400; letter-spacing: 0; color: var(--muted); }
   .job ul { margin: 0; padding-left: 20px; font-size: 16px; line-height: 1.7; color: var(--soft); }
   .job ul ul { margin: 4px 0 0; color: var(--muted); }
+  .job .metric { color: var(--accent); font-family: var(--mono); font-size: 14px; }
 
   #contact { border-top: 1px solid var(--line); }
   #contact .wrap { padding: 112px 24px 40px; }
@@ -91,13 +109,14 @@
     <a href="#projects">projects</a>
     <a href="#profile">profile</a>
     <a href="#career">career</a>
-    <a href="mailto:tw.kwon@twdev.kr">contact</a>
+    <a href="#contact">contact</a>
   </nav>
 </header>
 
 <main>
 <section id="top">
-  <h1>&gt; AI Application Engineer / Producer</h1>
+  <h1>데이터로 매장을 관리하는 영업관리자</h1>
+  <p class="sub">AI Application Engineer / Producer</p>
   <div class="ctas">
     <a class="btn" href="#projects">프로젝트 보기</a>
     <a class="btn2" href="https://github.com/cidtw">GitHub ↗</a>
@@ -106,27 +125,45 @@
 
 <section id="projects" class="wrap">
   <div class="head"><h2>Projects</h2><span>GitHub</span></div>
-  <a class="row" href="https://github.com/cidtw/kbo-live"><span class="no">01</span><span class="nm">kbo-live</span><span class="tag">TypeScript</span><span class="ar" aria-hidden="true">→</span></a>
-  <a class="row" href="https://github.com/cidtw/collab-discord-notifier"><span class="no">02</span><span class="nm">collab-discord-notifier</span><span class="tag">Python</span><span class="ar" aria-hidden="true">→</span></a>
-  <a class="row" href="https://github.com/cidtw/kbo-2027-draft-simulator"><span class="no">03</span><span class="nm">kbo-2027-draft-simulator</span><span class="tag">HTML</span><span class="ar" aria-hidden="true">→</span></a>
-  <a class="row" href="https://github.com/cidtw/sgaem-status"><span class="no">04</span><span class="nm">sgaem-status</span><span class="tag">CSS</span><span class="ar" aria-hidden="true">→</span></a>
-  <a class="row" href="https://github.com/cidtw/md-preflight"><span class="no">05</span><span class="nm">OrderFit (md-preflight)</span><span class="tag">FastAPI · archived</span><span class="ar" aria-hidden="true">→</span></a>
-  <a class="row" href="https://github.com/cidtw/sw_project"><span class="no">06</span><span class="nm">sw_project</span><span class="tag">Python · team · archived</span><span class="ar" aria-hidden="true">→</span></a>
+  <a class="row" href="https://github.com/cidtw/md-preflight"><span class="no">01</span><span class="nm">발주맞춤 (OrderFit)</span><span class="tag">FastAPI · Vercel · solo</span><span class="ar" aria-hidden="true">→</span>
+    <span class="desc">소상공인이 감으로 정하던 발주 시점과 수량을 재발주점(ROP)·안전재고·1회 발주량으로 계산. 3주 만에 시연 가능한 웹 서비스로 완성, 계산 근거는 표준 재고이론 3층으로 문서화.</span>
+    <img class="shot" src="orderfit.png" alt="발주맞춤 화면: 표준 방식과 발주맞춤의 재고 추이 비교 및 재발주점 계산 패널" loading="lazy">
+    <span class="desc">시연: baljumatch.vercel.app</span>
+  </a>
+  <a class="row" href="https://github.com/cidtw/sw_project"><span class="no">02</span><span class="nm">AI 맞춤형 채용 파이프라인</span><span class="tag">Python · Slack · team · archived</span><span class="ar" aria-hidden="true">→</span>
+    <span class="desc">잡코리아·사람인·인크루트 공고를 수집해 프로필 기반으로 추천하는 Slack 챗봇. 크롤링부터 FastAPI 챗봇, 스코어링까지 구현 전담, 이미지형 공고는 OCR로 처리.</span>
+  </a>
+  <a class="row" href="https://github.com/cidtw/collab-discord-notifier"><span class="no">03</span><span class="nm">collab-discord-notifier</span><span class="tag">Python</span><span class="ar" aria-hidden="true">→</span></a>
+  <p class="sub-head">Other Projects</p>
+  <a class="row" href="https://github.com/cidtw/kbo-live"><span class="no">04</span><span class="nm">kbo-live</span><span class="tag">TypeScript</span><span class="ar" aria-hidden="true">→</span></a>
+  <a class="row" href="https://github.com/cidtw/kbo-2027-draft-simulator"><span class="no">05</span><span class="nm">kbo-2027-draft-simulator</span><span class="tag">HTML</span><span class="ar" aria-hidden="true">→</span></a>
+  <a class="row" href="https://github.com/cidtw/sgaem-status"><span class="no">06</span><span class="nm">sgaem-status</span><span class="tag">CSS</span><span class="ar" aria-hidden="true">→</span></a>
 </section>
 
 <section id="profile" class="wrap">
   <div class="head"><h2>Profile</h2></div>
   <div class="facts">
-    <div class="fact"><span class="k">Date of Birth</span><span class="v">1998.11.19.</span></div>
     <div class="fact"><span class="k">Education</span>
       <div class="v edu">
-        <div><b>Myungduk Foreign Language High School</b><small>Major in German</small></div>
-        <div><b>Sogang University</b><small>Major in Business Administration</small></div>
+        <div><b>서강대학교 경영학과</b><small>수료 (2018.03 ~ 2026)</small></div>
+        <div><b>명덕외국어고등학교 독일어과</b><small>졸업 (2014.03 ~ 2017.02)</small></div>
+        <div><b>경기도기술학교 AI기반 SW자동화 과정</b><small>우수교육생 · 68일 (2026.05 ~ 07)</small></div>
+      </div>
+    </div>
+    <div class="fact"><span class="k">Certificates</span>
+      <div class="v certs">
+        <span>유통관리사 2급 <small>(2024.12)</small></span>
+        <span>SQL 개발자 (SQLD) <small>(2026.09)</small></span>
+        <span>AI-POT 1급 <small>(2026.08)</small></span>
+        <span>데이터분석준전문가 (ADsP) <small>(2025.03)</small></span>
+        <span>운전면허 1종 보통 <small>(2025.12)</small></span>
+        <span>TOEIC Speaking IH 150 <small>(~2027.06)</small></span>
+        <span>Zertifikat Deutsch (ZD) B1 <small>(2015.11)</small></span>
       </div>
     </div>
     <div class="fact"><span class="k">Hobbies &amp; Skills</span><span class="v">Tennis, Online Games</span></div>
     <div class="fact"><span class="k">Tech Stack</span>
-      <div class="v chips"><span>Python</span><span>TypeScript</span><span>FastAPI</span><span>HTML / CSS</span><span>C#</span><span>Git / GitHub</span></div>
+      <div class="v chips"><span>Python</span><span>TypeScript</span><span>FastAPI</span><span>Pydantic</span><span>SQLite</span><span>HTML / CSS</span><span>Slack API</span><span>Vercel</span><span>Git / GitHub</span><span>Claude Code</span></div>
     </div>
   </div>
 </section>
@@ -136,28 +173,23 @@
   <div class="job">
     <span class="when">2023. 07. ~ 2023. 10.</span>
     <div class="what">
-      <h3>NAVER<span class="team">NAVER App Contents Planning 1 - PT</span></h3>
+      <h3>NAVER<span class="team">앱콘텐츠플래닝1팀 (PT)</span></h3>
       <ul>
-        <li>NAVER OpenTalk Service Launching &amp; Operation Assistant
-          <ul><li>Preprocessing Fundamental User Data</li><li>Analyzing Competitor's Service &amp; Reporting Market Overview</li></ul>
+        <li>네이버 오픈톡 신규 서비스 초기 QA, 유저 피드백 데이터 수집·전처리·기초 분석</li>
+        <li>경쟁사 유사서비스 일일 모니터링 리포트를 작업 스케줄러 기반 크롤링 자동화로 구축
+          <ul><li>리포트 작성 시간 90분 → 45분 이내 (50% 감소)</li></ul>
         </li>
       </ul>
     </div>
   </div>
   <div class="job">
-    <span class="when">2025. 02. ~ 2025. 04.</span>
+    <span class="when">2025. 02. ~ 2025. 04.<br>2025. 06. ~ 2025. 09.</span>
     <div class="what">
-      <h3>LG Energy Solution<span class="team">Global Competency Assist Team</span></h3>
-      <ul><li>Translating &amp; Editing OJT Materials &amp; Lecture Video Clips</li></ul>
-    </div>
-  </div>
-  <div class="job">
-    <span class="when">2025. 06. ~ 2025. 09.</span>
-    <div class="what">
-      <h3>LG Energy Solution<span class="team">Global Competency Assist Team</span></h3>
+      <h3>LG Energy Solution<span class="team">Global Competency Assist Team (아르바이트 / 프리랜서)</span></h3>
       <ul>
-        <li>Statistical Process Control (SPC) OJT Renewal Project
-          <ul><li>SPC, DOE, 6-sigma, Basic Statistics for Manufacturing</li></ul>
+        <li>생산직 임직원 직무교육 자료 초벌번역 → 현지 검수 → 최종 교정·편집</li>
+        <li>통계적 공정관리, 실험계획법, 6시그마, 기초통계 교육과정 4종 리뉴얼
+          <ul><li>Vrew(자막 추출) + Perso AI(TTS) 영상 파이프라인 도입, 20분 분량 제작 시간 60분 → 40분 (33% 감소)</li></ul>
         </li>
       </ul>
     </div>
